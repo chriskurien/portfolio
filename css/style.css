@@ -1,0 +1,511 @@
+/* General */
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h2{
+  text-align: center;
+}
+
+.blueText{
+  font-weight: bold;
+  color: #2224EF;
+}
+
+/* End of General */
+
+/* Navigation */
+.logo {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.main_nav {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.logo a, .main_nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+ 
+.main_nav a:hover {
+  color: #2224EF;
+  text-decoration: overline underline;
+}
+
+.header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2224EF;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+}
+/* End of Navigation */
+
+
+/* Parallex */
+.parallex{
+  background-color: #595959;
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  height: 250px;                /* Parallax effect */
+  grid-column: 1 / -1;
+  grid-row-start: 2;
+}
+
+#comerica{
+  background-image:url("../images/sticky.jpg");
+}
+
+#repayd{
+  background-image:url("../images/repayd.jpg");
+}
+/* End of Parallex */
+
+
+
+/*Homepage */
+
+#intro_image {
+  display: block;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+#intro_text{
+  text-align: center;
+  padding:40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work_pics{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.work_pics img{
+  margin:15px;
+  height: 300px;
+  width: 400px;
+
+}
+
+/* End of Homepage */
+
+
+
+/* Footer */
+/* I learned how to create the rotating icons from the following site https://codepen.io/azziye/pen/bGNerRj
+I did go through and create new icons for Etsy and Github by using FontAwesome since those were not in the example. 
+I also altered sizes for the different media queries*/ 
+footer{
+
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  padding: 30px;
+  text-align: center;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: normal;
+  color: #fefefe;
+  transition: all 0.5s ease;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 12px;
+  line-height: 35px;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons, .fa-linkedin, .fa-etsy, .fa-github-alt {
+  font-size: 20px;
+}
+
+.rounded-social-buttons .social-button.etsy {
+  background: #eb6d20;
+}
+
+.rounded-social-buttons .social-button.etsy:hover, .rounded-social-buttons .social-button.etsy:focus {
+  color: #eb6d20;
+  background: #fefefe;
+  border-color: #eb6d20;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.github {
+  background: #24292e;
+}
+
+.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+  color: #24292e;
+  background: #fefefe;
+  border-color: #24292e;
+}
+/* End of Footer */
+
+
+
+
+/* Tablet View */
+@media all and (min-width: 600px) {
+  .header,.main_nav {
+    display: flex;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parallex{
+    height: 350px; 
+  }
+
+  .work_pics img{
+    height: 400px;
+    width: 575px;
+
+  }
+}
+
+
+/* Desktop View */
+@media all and (min-width: 786px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rounded-social-buttons .social-button {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 45px;
+  }
+
+  .rounded-social-buttons, .fa-linkedin, .fa-etsy, .fa-github-alt {
+    font-size: 22px;
+  }
+
+  .parallex{
+    height: 450px; 
+  }
+
+  .work_pics img{
+    height: 450px;
+    width: 650px;
+  }
+
+  .intro{
+    display: flex;
+    align-items: center;
+  }
+
+  #intro_text{
+    text-align: left;
+    font-size: 25px;
+  }
+
+  #intro_image{
+    width: 25%;
+    padding: 50px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* https://www.youtube.com/watch?v=WsspKNtaCIg 
+
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform:translateX(-50%)translateY(-50%);  
+
+
+
+
+
+  .work{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.work > img{
+  margin: 10px;
+  width: 50%
+  padding:5px;
+}
+
+  */
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2224EF;
+
+}
+
+#logo {
+  float: left;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: black;
+  padding: 20px 20px;
+  text-decoration:none;
+}
+
+.main_nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.nav_item a:hover {
+  color: #2224EF;
+  text-decoration: overline underline;
+}
+
+
+@media screen and (min-width: 850px){
+  header{
+    flex-direction: row;
+  }
+
+  .main_nav{
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+}
+
+
+
+footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+*/ 

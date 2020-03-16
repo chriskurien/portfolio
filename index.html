@@ -1,30 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="favicon" type="image/png" href="images/me.png"/>
+    <script src="https://kit.fontawesome.com/b51f4f02ad.js" crossorigin="anonymous"></script>
+    <script src="js/javascript.js"></script>
     <title>Chris Kurien</title>
   </head>
 
   <body>
-  	 <!picture gallery here>
 
-    <header>
+  <header class="header">
+    <h1 class="logo"><a href="index.html">Chris Kurien</a></h1>
+
     <nav>
-      <ol>
-        <li><a href="about.html">About</a></li>
-        <li><a href="comerica.html">Project 1</a></li>
-        <li><a href="voters_not_politicans.html">Project 2</a></li>
-        <li><a href="repayd.html">Project 3</a></li>
-      </ol>
+      <ul class="main_nav">
+          <li class="nav_item"><a href="index.html">Work</a></li>
+          <li class="nav_item"><a href="about.html">About</a></li>
+          <li class="nav_item"><a href="about.html">Contact Me</a></li>
+          <li class="nav_item"><a href="documents/resume.pdf" target="_blank">Resume</a></li>
+      </ul>
     </nav>
-  </header>
-  	 
-  	<p> I'm Chris, a UX Researcher based out of Ann Arbor. A problem-solver by nature, I love using research insights to design solutions that have a positive impact on other people's lives </p>
+  </header> 
+
+
+  <div class="intro">
+    <img src="images/me.png" alt="Drawing of Chris Kurien" id="intro_image">
+
+      <p id="intro_text">I'm Chris, a <span class="blueText">UX Researcher</span> based out of Ann Arbor. A problem-solver by nature, I love using <span class="blueText">research insights</span> to <span class="blueText">design solutions</span> that have a <span class="blueText">positive impact</span> on other people's lives.</p>
+
+  </div>
+
+
+  <h2 id="selected">Selected Projects</h2>
+    <div class="work_pics">
+      <a href="comerica.html"><img src="images/sticky.jpg" alt="Sticky-notes on a wall"></a>
+
+      <a href="repayd.html"><img src="images/repayd.jpg" alt="Mobile Mockups for a repayment tracking app"></a>
+    </div>
+
+
+
+  <footer>
+    <p>Let's Connect!</p>
+
+    <div class="rounded-social-buttons">
+
+      <a class="social-button linkedin" href="https://www.linkedin.com/in/chriskurien/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      
+      <a class="social-button etsy" href="https://www.etsy.com/shop/KurienCreations?ref=simple-shop-header-name&listing_id=719808118" target="_blank"><i class="fab fa-etsy"></i></a>
+      
+
+      <a class="social-button github" href="https://github.com/chriskurien" target="_blank"><i class="fab fa-github-alt"></i></a>
+    
+    </div>
+
+    &copy; Chris Kurien 2020
+
+  </footer>
 
   </body>
+</html>
 
-  <!picture gallery here>
 
-  </html>
 
+<!--
+      <header class="bar">
+    <h1 class="logo"><a href="index.html">Chris Kurien</a></h1>
+      <ul class="main_nav">
+        <li class="nav_item"><a href= "about.html">About<a/></li>
+        <li class="nav_item"><a href= "index.html">Projects<a/></li>
+        <li class="nav_item"><a href= "images/me.png" target="_blank">Resume<a/></li>
+      </ul>
+  </header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 id = "work">Favorite Projects</h2>
+      <div class="gallery"> 
+        <img id="contextual" src="images/sticky.jpg" alt="Sticky-notes on a wall" />
+         <img id="repayd_mockup" src="images/repayd.jpg" alt="Mobile Mockups for Financial Repayment App" />
+      </div>
+
+
+
+
+
+  <a class = "skip" href="#skip">Skip to Main Content<a/>
+  
+  <header id="bar">
+    <a href="http://chriskurien.me/" id="logo" target="_blank">Chris Kurien</a>
+    <nav>
+      <ul class="main_nav">
+        <li class="nav_item"><a href= "about.html">About<a/></li>
+        <li class="nav_item"><a href= "index.html">Projects<a/></li>
+        <li class="nav_item"><a href= "images/me.png" target="_blank">Resume<a/></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+
+
+
+
+
+  <main>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-road"></i> ACME CO INC.</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Product</a></li>
+                            <li><a href="">Benefits</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Legal Terms</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Contact Us</h5>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right">
+                        <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+-->
