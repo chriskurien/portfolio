@@ -173,7 +173,7 @@ a.skip:focus{
   z-index: 1;
 }
 
-/* How to center text: Afapted from https://www.youtube.com/watch?v=bUZJvK6Rv1I*/
+/* How to center text: Adapted from https://www.youtube.com/watch?v=bUZJvK6Rv1I*/
 .withinParallex{
   padding:0;
   margin:0;
@@ -182,8 +182,16 @@ a.skip:focus{
   text-align: center;
   position:relative;
   top:50%;
-  color: black;
+  color: white;
   transform:translateY(-50%);
+}
+
+.text_block{
+  background-color: black;
+  padding:30px;
+  align-items: center;
+  margin: auto;
+  opacity: 95%;
 }
 
 #comerica{
@@ -255,6 +263,24 @@ a.skip:focus{
 }
 /* End of Flip Card */
 /* End of Comerica */
+
+/*Art Page */
+/*Gallery */
+
+/*End of Gallery */
+
+/*End of Art Page */
+
+/*About Page */
+#about img{
+  border-radius: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:60%;
+}
+
+/*End of About Page */
 
 /* Footer */
 /* I learned how to create the rotating icons from the following site https://codepen.io/azziye/pen/bGNerRj
@@ -342,10 +368,20 @@ footer{
 
 
 /* Media Queries */
+
+
+/* Reduced Motion */
+@media screen and (prefers-reduced-motion: reduce) {
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus{
+    transform:none;
+  }
+}
+/* End of Reduced Motion */
+
 /* Tablet View */
 @media all and (min-width: 786px) {
 
-  .project_overview,.problem,#affinity,#recommendation, #comerica_findings{
+  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me{
     margin-left: auto;
     margin-right: auto;
     width:75%;
@@ -369,12 +405,6 @@ footer{
     width: 575px;
   }
 
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-
   #intro{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -390,6 +420,11 @@ footer{
     text-align: left;
     font-size: 20px;
     margin:auto;
+  }
+
+  .text_block{
+    opacity: 95%;
+    width: 75%;
   }  
 }
 /* End of Tablet View */
@@ -401,7 +436,7 @@ footer{
     justify-content: space-between;
   }
 
-  .project_overview,.problem,#affinity,#recommendation, #comerica_findings{
+  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me{
     margin-left: auto;
     margin-right: auto;
     width:75%;
@@ -434,12 +469,6 @@ footer{
   #intro_image{
     width: 85%;
     padding: 15px;
-  }
-
-  .column {
-    -ms-flex: 25%;
-    flex: 25%;
-    max-width: 25%;
   }
 }
 /* End of Desktop View */
