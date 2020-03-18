@@ -149,6 +149,42 @@ a.skip:focus{
   height: 300px;
   width: 400px;
 }
+
+
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.caption_photo:hover .mask{
+  opacity:1;
+}
+
+.caption_photo {
+  position: relative;
+}
+
+.mask h3 {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top:50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 /*End of Selected Projects Section */
 
 /*Contact Section */
@@ -161,7 +197,7 @@ a.skip:focus{
   border-radius: 10px;
   border: none;
   font-size: 18px;
-  border: 2px solid transparent;
+  background-color: #edebfe;
 }
 
 .form::placeholder {
@@ -178,8 +214,8 @@ label{
 }
 
 .form_btn {
-  background-color: yellow;
-  color: black;
+  background-color: #2224EF;
+  color: white;
   width: auto;
   font-size: 20px;
   font-weight: bold;
@@ -193,7 +229,7 @@ label{
 }
 
 .form_btn:hover {
-  background-color: #fec810;
+  background-color: #170ca3;
 }
 
 .form_btn:active {
@@ -207,7 +243,6 @@ label{
 }
 
 #contact_me{
-  background-color: #edebfe;
   margin: 0;
   padding: 0;
 }
@@ -350,6 +385,14 @@ label{
 /* End of Flip Card */
 /* End of Comerica */
 
+/* Repayd*/
+iframe{
+  display: block;
+  margin: auto;
+  border: 2px solid #2224EF;
+  margin-bottom: 40px;
+}
+
 /*Art Page */
 /*Gallery */
 /* Adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive*/
@@ -384,19 +427,25 @@ label{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:60%;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  width:50%;
 }
 
+.color{
+  font-size: 30px;
+  font-weight: normal;
+  -webkit-animation:colorchange 38s infinite alternate;
+}
 /*End of About Page */
 
 /* Footer */
-
 footer{
   grid-column: 1 / -1;  
   grid-row: 7 / auto;   
   padding: 30px;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: #edebfe;
 }
 
 /* Social Icons */
@@ -431,6 +480,8 @@ I also altered sizes for the different media queries*/
   font-size: 10px;
   line-height: 35px;
 }
+
+
 
 .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
   -webkit-transform: rotate(360deg);
@@ -484,13 +535,29 @@ I also altered sizes for the different media queries*/
   .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus{
     transform:none;
   }
+  .flip-card-inner,a.skip,.mask,.rounded-social-buttons .social-button {
+    transition:0s;
+  }
+
+  .color{
+    visibility: hidden;
+  } 
+
+  #about_me p{
+    padding-top: 0px;
+  }
+
+  #about img{
+    margin-bottom: 0px;
 }
+
+
 /* End of Reduced Motion */
 
 /* Tablet View */
 @media all and (min-width: 786px) {
 
-  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me{
+  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me, #design_process, #prototype{
     margin-left: auto;
     margin-right: auto;
     width:75%;
@@ -564,6 +631,10 @@ I also altered sizes for the different media queries*/
     flex: 50%;
     max-width: 50%;
   }
+
+  .mask h3 {
+    font-size: 40px;
+  }
 }
 /* End of Tablet View */
 
@@ -615,6 +686,30 @@ I also altered sizes for the different media queries*/
     max-width: 25%;
     padding: 0 4px;
   }
+
+   #about img{
+    border-radius: 400px;
+    width:45%;
+  }
 }
 /* End of Desktop View */
 /* End of Media Queries */
+
+/*Modified from : https://codepen.io/raaasin/pen/quvHr*/
+ @-webkit-keyframes colorchange {
+      0% {
+        color: orange;
+      }
+      
+      33% {
+        color: green;
+      }
+      
+      66% {
+        color: blue;
+      }
+      
+      100% {  
+        color: #FEA100;
+      }
+}
