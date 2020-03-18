@@ -529,6 +529,23 @@ I also altered sizes for the different media queries*/
 
 /* Media Queries */
 
+@-webkit-keyframes colorchange {
+      0% {
+        color: orange;
+      }
+      
+      33% {
+        color: green;
+      }
+      
+      66% {
+        color: blue;
+      }
+      
+      100% {  
+        color: #FEA100;
+      }
+}
 
 /* Reduced Motion */
 @media screen and (prefers-reduced-motion: reduce) {
@@ -549,9 +566,8 @@ I also altered sizes for the different media queries*/
 
   #about img{
     margin-bottom: 0px;
+  }
 }
-
-
 /* End of Reduced Motion */
 
 /* Tablet View */
@@ -696,20 +712,4 @@ I also altered sizes for the different media queries*/
 /* End of Media Queries */
 
 /*Modified from : https://codepen.io/raaasin/pen/quvHr*/
- @-webkit-keyframes colorchange {
-      0% {
-        color: orange;
-      }
-      
-      33% {
-        color: green;
-      }
-      
-      66% {
-        color: blue;
-      }
-      
-      100% {  
-        color: #FEA100;
-      }
-}
+ 
