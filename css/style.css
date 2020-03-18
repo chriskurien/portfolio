@@ -150,6 +150,92 @@ a.skip:focus{
   width: 400px;
 }
 /*End of Selected Projects Section */
+
+/*Contact Section */
+
+/* Adapted from: https://codepen.io/KrissSteindals/pen/OdMJZE?editors=1100 */
+.form {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  border: 2px solid transparent;
+}
+
+.form::placeholder {
+  color: #292b2d;
+}
+
+label{
+  font-size: 20px;
+}
+
+.message {
+  min-height: 240px;
+  resize: vertical;
+}
+
+.form_btn {
+  background-color: yellow;
+  color: black;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.form_btn:hover {
+  background-color: #fec810;
+}
+
+.form_btn:active {
+  box-shadow: 0px 0px 0px 4px rgba(254, 209, 54, 0.6);
+}
+
+.container_contact{
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 15px 50px 30px 50px;
+}
+
+#contact_me{
+  background-color: #edebfe;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*End of Contact Section */
 /* End of Homepage */
 
 
@@ -266,6 +352,27 @@ a.skip:focus{
 
 /*Art Page */
 /*Gallery */
+/* Adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive*/
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+#gallery img{
+  width:100%
+}
+
+
 
 /*End of Gallery */
 
@@ -283,9 +390,7 @@ a.skip:focus{
 /*End of About Page */
 
 /* Footer */
-/* I learned how to create the rotating icons from the following site https://codepen.io/azziye/pen/bGNerRj
-I did go through and create new icons for Etsy and Github by using FontAwesome since those were not in the example. 
-I also altered sizes for the different media queries*/ 
+
 footer{
   grid-column: 1 / -1;  
   grid-row: 7 / auto;   
@@ -295,6 +400,9 @@ footer{
 }
 
 /* Social Icons */
+/* I learned how to create the rotating icons from the following site https://codepen.io/azziye/pen/bGNerRj
+I did go through and create new icons for Etsy and Github by using FontAwesome since those were not in the example. 
+I also altered sizes for the different media queries*/ 
 .svg-inline--fa {
   vertical-align: -0.200em;
 }
@@ -320,7 +428,7 @@ footer{
   width: 30px;
   height: 30px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 35px;
 }
 
@@ -363,6 +471,7 @@ footer{
   background: #fefefe;
   border-color: #24292e;
 }
+
 /* End of Social Icons */
 /* End of Footer */
 
@@ -426,6 +535,35 @@ footer{
     opacity: 95%;
     width: 75%;
   }  
+
+  form {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .form {
+    width: auto;
+    margin: 0;
+  }
+
+  .message {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+
+  .form_btn {
+    justify-self: center;
+    grid-column: span 2;
+    margin-top: 15px;
+  }
+
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 /* End of Tablet View */
 
@@ -445,12 +583,12 @@ footer{
   .rounded-social-buttons .social-button {
     width: 35px;
     height: 35px;
-    font-size: 12px;
+    font-size: 5px;
     line-height: 45px;
   }
 
   .rounded-social-buttons, .fa-linkedin, .fa-etsy, .fa-github-alt {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .parallex{
@@ -469,6 +607,13 @@ footer{
   #intro_image{
     width: 85%;
     padding: 15px;
+  }
+
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
   }
 }
 /* End of Desktop View */
