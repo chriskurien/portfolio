@@ -1,0 +1,833 @@
+/* General Styling*/
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h2{
+  padding:15px;
+  text-align: center;
+  font-size: 30px;
+}
+
+h3{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  color: #2224EF;
+  font-size:22px; 
+  text-align: center;
+}
+
+h4{
+  padding-top: 15px;
+  padding-left: 35px;
+}
+
+p{
+  font-size: 15px;
+  padding:35px;
+  padding-top: 15px;
+}
+
+footer p{
+  padding:0px;
+}
+
+.blueText{
+  font-weight: bold;
+  color: #2224EF;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* Skip to Content */
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 2;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+/* End of Skip to Content*/
+
+/* Navigation */
+#logo {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+#main_nav {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+#logo a, #main_nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+ 
+#main_nav a:hover {
+  color: #2224EF;
+  text-decoration: overline underline;
+}
+
+.itemActive{
+  text-decoration: overline underline;
+}
+
+#header {
+  position: fixed;
+  background-color: white; 
+  width:100%;
+  z-index: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2224EF;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+}
+/* End of Navigation */
+/* End of General */
+
+
+/*Homepage */
+/*Introduction Section*/
+/*Sticky Header*/
+#skip {
+  padding-top: 220px;
+}
+/*End of Sticky Header*/
+
+/*Use of Grid*/
+#intro{
+  display: grid;
+  grid-template-rows: auto auto;
+  padding:10px;
+}
+
+#intro_image{
+  width: 80%;
+  padding: 20px;
+  margin:auto;
+}
+
+#intro_text{
+  text-align: center;
+  font-size: 20px;
+}
+/*End of Introduction Section*/
+
+/*Selected Projects Section */
+/*Use of Flex*/
+#work_pics{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#work_pics img{
+  margin:15px;
+  height: 300px;
+  width: 400px;
+}
+
+/*For Captions: Modified from https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease-in-out 0s;
+  background-color: black;
+}
+
+.caption_photo:hover .mask{
+  opacity:1;
+}
+
+.caption_photo {
+  position: relative;
+}
+
+.mask h3 {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top:50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*End of Selected Projects Section */
+
+
+/*Contact Section */
+/* Contact Form: Modified from: https://codepen.io/KrissSteindals/pen/OdMJZE?editors=1100 */
+.form {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  background-color: #edebfe;
+}
+
+.form::placeholder {
+  color: #292b2d;
+}
+
+label{
+  font-size: 20px;
+}
+
+.message {
+  min-height: 240px;
+  resize: vertical;
+}
+
+.form_btn {
+  background-color: #2224EF;
+  color: white;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.form_btn:hover {
+  background-color: #170ca3;
+}
+
+.form_btn:active {
+  box-shadow: 0px 0px 0px 4px rgba(254, 209, 54, 0.6);
+}
+
+.container_contact{
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 15px 50px 30px 50px;
+}
+
+#contact_me{
+  margin: 0;
+  padding: 0;
+}
+/*End of Contact Section */
+/* End of Homepage */
+
+
+/*For Both Projects*/
+/*Project Overview Blocks*/
+.blocks{
+  display: block;
+}
+/*End of Project Overview Blocks*/
+
+/* Button*/
+.all_btn {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  background-color: #2224EF;
+  color: white;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.all_btn:hover {
+  background-color: #170ca3;
+}
+
+.all_btn:active {
+  box-shadow: 0px 0px 0px 4px rgba(254, 209, 54, 0.6);
+}
+/* End of Button*/
+
+/* Parallex */
+/*Use of Grid*/
+.parallex{
+  background-color: #595959;
+  background-attachment: fixed;   
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;       
+  height: 250px;                
+  grid-column: 1 / -1;
+  grid-row-start: 2;
+  z-index: 1;
+}
+
+/* How to center text: Modified from https://www.youtube.com/watch?v=bUZJvK6Rv1I*/
+.withinParallex{
+  padding:0;
+  margin:0;
+  font-size: 40px;
+  margin:auto;
+  text-align: center;
+  position:relative;
+  top:50%;
+  color: white;
+  transform:translateY(-50%);
+}
+
+.text_block{
+  background-color: black;
+  padding:30px;
+  align-items: center;
+  margin: auto;
+  opacity: 95%;
+}
+
+#comerica{
+  background-image:url("../images/sticky.jpg");
+}
+
+#repayd{
+  background-image:url("../images/repayd.jpg");
+}
+/* End of Parallex */
+/* End of Both Projects*/
+
+/* Comerica*/
+/* Big Numbers: Modified from https://codepen.io/secondfret/pen/oexuc*/
+.bigNumbers{
+  position: absolute;
+  padding-left: 45px;
+  font: bold italic 40px/1.5 "Montserrat", sans-serif;
+  color: gray;
+}
+
+.big{
+  padding-left: 110px;
+}
+/* End of Big Numbers:*/
+
+/* Flip Card: Modified from https://www.w3schools.com/howto/howto_css_flip_card.asp*/
+.flip {
+  background-color: transparent;
+  width: 500px;
+  height: 400px;
+  perspective: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Accessible by tab*/
+.flip:hover .flip-card-inner,.flip:focus .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip img {
+  width:500px;
+  height:400px; 
+}
+/* End of Flip Card */
+/* End of Comerica */
+
+/* Repayd*/
+iframe{
+  display: block;
+  margin: auto;
+  border: 2px solid #2224EF;
+  margin-bottom: 40px;
+}
+/* End of Repayd*/
+
+/*Art Page */
+/*Gallery */
+/* Adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive*/
+/*Use of Flex*/
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+#gallery img{
+  width:100%
+}
+
+/*Hover for Gallery */
+.hover{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hover .hover-bottom{
+  display: block;
+}
+
+.hover .hover-top{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #fff;
+  padding: 15px;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.hover:hover .hover-top,
+.hover:active .hover-top {
+  opacity: 1;
+}
+.hover .hover-text {
+  text-align: center;
+  font-size: 35px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*End of Hover for Gallery */
+/*End of Gallery */
+/*End of Art Page */
+
+/*About Page */
+#about img{
+  border-radius: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  width:50%;
+}
+
+.color{
+  font-size: 30px;
+  font-weight: normal;
+  -webkit-animation:colorchange 38s infinite alternate;
+}
+
+/* Modified https://codepen.io/juanbrujo/pen/yGpAK*/
+.retro{
+  font-size:25px;
+  color: #2224EF;
+  letter-spacing: .05em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+/*End of About Page */
+
+/* Footer */
+/*Use of Grid*/
+footer{
+  grid-column: 1 / -1;  
+  grid-row: 7 / auto;   
+  padding: 30px;
+  text-align: center;
+  background-color: #edebfe;
+}
+
+/* Social Icons */
+/* I learned how to create the rotating icons from the following site https://codepen.io/azziye/pen/bGNerRj
+I did go through and create new icons for Etsy and Github by using FontAwesome since those were not in the example. 
+I also altered sizes for the different media queries*/ 
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: normal;
+  color: #fefefe;
+  transition: all 0.5s ease;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 10px;
+  line-height: 35px;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons, .fa-linkedin, .fa-etsy, .fa-github-alt {
+  font-size: 20px;
+}
+
+.rounded-social-buttons .social-button.etsy {
+  background: #eb6d20;
+}
+
+.rounded-social-buttons .social-button.etsy:hover, .rounded-social-buttons .social-button.etsy:focus {
+  color: #eb6d20;
+  background: #fefefe;
+  border-color: #eb6d20;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.github {
+  background: #24292e;
+}
+
+.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+  color: #24292e;
+  background: #fefefe;
+  border-color: #24292e;
+}
+/* End of Social Icons */
+/* End of Footer */
+
+
+/* Keyframes */
+/*Modified from : https://codepen.io/raaasin/pen/quvHr*/
+@-webkit-keyframes colorchange {
+  0% {
+    color: orange;
+  }
+      
+  33% {
+    color: green;
+  }
+      
+  66% {
+    color: blue;
+  }
+      
+  100% {  
+    color: #FEA100;
+  }
+}
+/* End of Keyframes */
+
+/* Media Queries */
+/* Reduced Motion */
+@media screen and (prefers-reduced-motion: reduce) {
+
+  /* No rotating animation for social buttons */
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus{
+    transform:none;
+  }
+
+  /* No rotating or transitions of any sort*/
+  .flip-card-inner,a.skip,.mask,.rounded-social-buttons .social-button, .hover .hover-top {
+    transition:0s;
+  }
+
+  /* I decided to hide this element because it is not essential to the page and it is the most engaging when the animation is on*/
+  .color{
+    visibility: hidden;
+  } 
+
+  #about_me p{
+    padding-top: 0px;
+  }
+
+  #about img{
+    margin-bottom: 0px;
+  }
+}
+/* End of Reduced Motion */
+
+/* Tablet View */
+@media all and (min-width: 786px) {
+
+  /* Homepage/Most pages */
+  /* Centers text chunks to the center of the page and makes sure it is only taking up 75% of the page, in an effort to make it easier for readers - Most Pages*/
+  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me, #design_process, #prototype{
+    margin-left: auto;
+    margin-right: auto;
+    width:75%;
+  }
+
+  /* Sticky Footer*/
+  #skip{
+    padding-top: 125px;
+  }
+  /*End Sticky Header*/
+
+  /* Flexbox to make the navigation responsive - All Pages*/
+  /*Use of Flex*/
+  #header,#main_nav {
+    display: flex;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   /* Homepage */
+   /* Made the pictures bigger to take up more space - Homepage */
+  #work_pics img{
+    height: 400px;
+    width: 575px;
+  }
+
+  /* Form becomes two colums so that the page becomes more dynamic - Homepage */
+  /*Use of Grid*/
+  form {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .form {
+    width: auto;
+    margin: 0;
+  }
+
+  .message {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+
+  .form_btn {
+    justify-self: center;
+    grid-column: span 2;
+    margin-top: 15px;
+  }
+
+   /* Caption text becomes bigger to look more full - Homepage */
+  .mask h3 {
+    font-size: 40px;
+  }
+
+  /* Switches the main view to two columns with one taking up 2/3 of the available space, done in an effort to make content more engaging - Homepage */
+  /*Use of Grid*/
+  #intro{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding:10px;
+  }
+
+  #intro_image{
+    width: 90%;
+    padding: 10px;
+  }
+
+  #intro_text{
+    text-align: left;
+    font-size: 20px;
+    margin:auto;
+  }
+
+  /* Project Pages */
+  /* The height of the parallex is made a bit bigger so as to maintain design when expanded - Projects Pages */
+  .parallex{
+    height: 350px; 
+  }
+
+  /* Text block within parallex takes up only 75% of the screen rather than 100% like in mobile view. - Projects Pages */
+  .text_block{
+    opacity: 95%;
+    width: 75%;
+  }  
+
+  /* Gallery Page */
+  /* Gallery switches to two columns - Gallery */
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  /* Gallery hover font switches size */
+  .hover .hover-text {
+    font-size: 30px;
+  }
+/* End of Tablet View */
+
+/* Desktop View */
+@media all and (min-width: 900px) {
+  /* Homepage/Most pages */
+  /* Flexbox to make the navigation responsive - All Pages*/
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Made the social icons a bit bigger*/
+  .rounded-social-buttons .social-button {
+    width: 35px;
+    height: 35px;
+    font-size: 5px;
+    line-height: 45px;
+  }
+
+  .rounded-social-buttons, .fa-linkedin, .fa-etsy, .fa-github-alt {
+    font-size: 20px;
+  }
+
+  /* Project Pages */
+  /* The height of the parallex is made a bit bigger so as to maintain design when expanded - Projects Pages */
+  .parallex{
+    height: 350px; 
+  }
+
+  /* Homepage */
+
+   /* Sticky */
+  #skip{
+    padding-top: 75px;
+  }
+   /* End of Sticky */
+
+   /* Made the pictures bigger to take up more space - Homepage */
+  #work_pics img{
+    height: 450px;
+    width: 650px;
+  }
+
+  #intro_text{
+    font-size: 25px;
+  }
+
+  #intro_image{
+    width: 85%;
+    padding: 15px;
+  }
+
+  /* Gallery Page */
+  /* Gallery switches to two columns - Gallery */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  /* Gallery hover font switches size */
+  .hover .hover-text {
+    font-size: 25px;
+  }
+
+  /* About Page */
+  /* Makes my profile picture a little bigger*/
+  #about img{
+    border-radius: 400px;
+    width:45%;
+  }
+}
+/* End of Desktop View */
+/* End of Media Queries */
+ 
