@@ -1,4 +1,5 @@
 //From: https://codepen.io/CheeseTurtle/pen/jzdgI, I changed the css styling and created a keyframe for the animation
+
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -20,7 +21,6 @@ TxtRotate.prototype.tick = function() {
   }
 
   this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
   var that = this;
   var delta = 300 - Math.random() * 100;
 
@@ -39,7 +39,6 @@ TxtRotate.prototype.tick = function() {
     that.tick();
   }, delta);
 
-
 };
 
 window.onload = function() {
@@ -57,7 +56,6 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
-
 //From: https://codepen.io/CheeseTurtle/pen/jzdgI
 
 

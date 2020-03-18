@@ -1,8 +1,12 @@
-/* General */
+/* General Styling*/
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   margin: 0;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 ul {
@@ -55,7 +59,7 @@ footer p{
   font-weight: bold;
 }
 
-/* Skip */
+/* Skip to Content */
 a.skip{
   background: white;
   left: 0;
@@ -76,7 +80,7 @@ a.skip:focus{
 *:focus{
   border: 2px solid black;
 }
-/* End of Skip */
+/* End of Skip to Content*/
 
 /* Navigation */
 #logo {
@@ -118,6 +122,7 @@ a.skip:focus{
 
 /*Homepage */
 /*Introduction Section*/
+/*Use of Grid*/
 #intro{
   display: grid;
   grid-template-rows: auto auto;
@@ -137,6 +142,7 @@ a.skip:focus{
 /*End of Introduction Section*/
 
 /*Selected Projects Section */
+/*Use of Flex*/
 #work_pics{
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +156,7 @@ a.skip:focus{
   width: 400px;
 }
 
-
+/*For Captions: Modified from https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
 .mask {
   position: absolute;
   top: 0;
@@ -183,13 +189,11 @@ a.skip:focus{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-
 /*End of Selected Projects Section */
 
-/*Contact Section */
 
-/* Adapted from: https://codepen.io/KrissSteindals/pen/OdMJZE?editors=1100 */
+/*Contact Section */
+/* Contact Form: Modified from: https://codepen.io/KrissSteindals/pen/OdMJZE?editors=1100 */
 .form {
   width: 100%;
   margin-bottom: 15px;
@@ -246,35 +250,11 @@ label{
   margin: 0;
   padding: 0;
 }
-
-*{
-  box-sizing: border-box;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*End of Contact Section */
 /* End of Homepage */
 
 
-/*Both Projects*/
+/*For Both Projects*/
 /*Project Overview Blocks*/
 .blocks{
   display: block;
@@ -282,6 +262,7 @@ label{
 /*End of Project Overview Blocks*/
 
 /* Parallex */
+/*Use of Grid*/
 .parallex{
   background-color: #595959;
   background-attachment: fixed;   
@@ -294,7 +275,7 @@ label{
   z-index: 1;
 }
 
-/* How to center text: Adapted from https://www.youtube.com/watch?v=bUZJvK6Rv1I*/
+/* How to center text: Modified from https://www.youtube.com/watch?v=bUZJvK6Rv1I*/
 .withinParallex{
   padding:0;
   margin:0;
@@ -326,7 +307,7 @@ label{
 /* End of Both Projects*/
 
 /* Comerica*/
-/* Big Numbers: Adapted from https://codepen.io/secondfret/pen/oexuc*/
+/* Big Numbers: Modified from https://codepen.io/secondfret/pen/oexuc*/
 .bigNumbers{
   position: absolute;
   padding-left: 45px;
@@ -339,7 +320,7 @@ label{
 }
 /* End of Big Numbers:*/
 
-/* Flip Card: Adapted from https://www.w3schools.com/howto/howto_css_flip_card.asp*/
+/* Flip Card: Modified from https://www.w3schools.com/howto/howto_css_flip_card.asp*/
 .flip {
   background-color: transparent;
   width: 500px;
@@ -392,15 +373,16 @@ iframe{
   border: 2px solid #2224EF;
   margin-bottom: 40px;
 }
+/* End of Repayd*/
 
 /*Art Page */
 /*Gallery */
 /* Adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive*/
-
+/*Use of Flex*/
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 4px;
 }
@@ -414,11 +396,7 @@ iframe{
 #gallery img{
   width:100%
 }
-
-
-
 /*End of Gallery */
-
 /*End of Art Page */
 
 /*About Page */
@@ -437,9 +415,19 @@ iframe{
   font-weight: normal;
   -webkit-animation:colorchange 38s infinite alternate;
 }
+
+/* Modified https://codepen.io/juanbrujo/pen/yGpAK*/
+.retro{
+  font-size:25px;
+  color: #2224EF;
+  letter-spacing: .05em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
 /*End of About Page */
 
 /* Footer */
+/*Use of Grid*/
 footer{
   grid-column: 1 / -1;  
   grid-row: 7 / auto;   
@@ -481,8 +469,6 @@ I also altered sizes for the different media queries*/
   line-height: 35px;
 }
 
-
-
 .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
@@ -522,40 +508,46 @@ I also altered sizes for the different media queries*/
   background: #fefefe;
   border-color: #24292e;
 }
-
 /* End of Social Icons */
 /* End of Footer */
 
 
-/* Media Queries */
-
+/* Keyframes */
+/*Modified from : https://codepen.io/raaasin/pen/quvHr*/
 @-webkit-keyframes colorchange {
-      0% {
-        color: orange;
-      }
+  0% {
+    color: orange;
+  }
       
-      33% {
-        color: green;
-      }
+  33% {
+    color: green;
+  }
       
-      66% {
-        color: blue;
-      }
+  66% {
+    color: blue;
+  }
       
-      100% {  
-        color: #FEA100;
-      }
+  100% {  
+    color: #FEA100;
+  }
 }
+/* End of Keyframes */
 
+/* Media Queries */
 /* Reduced Motion */
 @media screen and (prefers-reduced-motion: reduce) {
+
+  /* No rotating animation for social buttons */
   .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus{
     transform:none;
   }
+
+  /* No rotating flip card */
   .flip-card-inner,a.skip,.mask,.rounded-social-buttons .social-button {
     transition:0s;
   }
 
+  /* I decided to hide this element because it is not essential to the page and it is the most engaging when the animation is on*/
   .color{
     visibility: hidden;
   } 
@@ -573,12 +565,16 @@ I also altered sizes for the different media queries*/
 /* Tablet View */
 @media all and (min-width: 786px) {
 
+  /* Homepage/Most pages */
+  /* Centers text chunks to the center of the page and makes sure it is only taking up 75% of the page, in an effort to make it easier for readers - Most Pages*/
   .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me, #design_process, #prototype{
     margin-left: auto;
     margin-right: auto;
     width:75%;
   }
 
+  /* Flexbox to make the navigation responsive - All Pages*/
+  /*Use of Flex*/
   #header,#main_nav {
     display: flex;
   }
@@ -588,37 +584,15 @@ I also altered sizes for the different media queries*/
     align-items: center;
   }
 
-  .parallex{
-    height: 350px; 
-  }
-
+   /* Homepage */
+   /* Made the pictures bigger to take up more space - Homepage */
   #work_pics img{
     height: 400px;
     width: 575px;
   }
 
-  #intro{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding:10px;
-  }
-
-  #intro_image{
-    width: 90%;
-    padding: 10px;
-  }
-
-  #intro_text{
-    text-align: left;
-    font-size: 20px;
-    margin:auto;
-  }
-
-  .text_block{
-    opacity: 95%;
-    width: 75%;
-  }  
-
+  /* Form becomes two colums so that the page becomes more dynamic - Homepage */
+  /*Use of Grid*/
   form {
     display: grid;
     grid-gap: 12px;
@@ -642,31 +616,62 @@ I also altered sizes for the different media queries*/
     margin-top: 15px;
   }
 
+   /* Caption text becomes bigger to look more full - Homepage */
+  .mask h3 {
+    font-size: 40px;
+  }
+
+  /* Switches the main view to two columns with one taking up 2/3 of the available space, done in an effort to make content more engaging - Homepage */
+  /*Use of Grid*/
+  #intro{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding:10px;
+  }
+
+  #intro_image{
+    width: 90%;
+    padding: 10px;
+  }
+
+  #intro_text{
+    text-align: left;
+    font-size: 20px;
+    margin:auto;
+  }
+
+  /* Project Pages */
+  /* The height of the parallex is made a bit bigger so as to maintain design when expanded - Projects Pages */
+  .parallex{
+    height: 350px; 
+  }
+
+  /* Text block within parallex takes up only 75% of the screen rather than 100% like in mobile view. - Projects Pages */
+  .text_block{
+    opacity: 95%;
+    width: 75%;
+  }  
+
+  /* Gallery Page */
+  /* Gallery switches to two columns - Gallery */
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
-  }
-
-  .mask h3 {
-    font-size: 40px;
   }
 }
 /* End of Tablet View */
 
 /* Desktop View */
 @media all and (min-width: 900px) {
+  /* Homepage/Most pages */
+  /* Flexbox to make the navigation responsive - All Pages*/
   #header {
     flex-direction: row;
     justify-content: space-between;
   }
-
-  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me{
-    margin-left: auto;
-    margin-right: auto;
-    width:75%;
-  }
-
+  
+  /* Made the social icons a bit bigger*/
   .rounded-social-buttons .social-button {
     width: 35px;
     height: 35px;
@@ -678,10 +683,14 @@ I also altered sizes for the different media queries*/
     font-size: 20px;
   }
 
+  /* Project Pages */
+  /* The height of the parallex is made a bit bigger so as to maintain design when expanded - Projects Pages */
   .parallex{
     height: 350px; 
   }
 
+  /* Homepage */
+   /* Made the pictures bigger to take up more space - Homepage */
   #work_pics img{
     height: 450px;
     width: 650px;
@@ -696,6 +705,8 @@ I also altered sizes for the different media queries*/
     padding: 15px;
   }
 
+  /* Gallery Page */
+  /* Gallery switches to two columns - Gallery */
   .column {
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
@@ -703,13 +714,13 @@ I also altered sizes for the different media queries*/
     padding: 0 4px;
   }
 
-   #about img{
+  /* About Page */
+  /* Makes my profile picture a little bigger*/
+  #about img{
     border-radius: 400px;
     width:45%;
   }
 }
 /* End of Desktop View */
 /* End of Media Queries */
-
-/*Modified from : https://codepen.io/raaasin/pen/quvHr*/
  
