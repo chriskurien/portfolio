@@ -335,7 +335,7 @@ label{
   opacity: 95%;
 }
 
-#comerica{
+#financial{
   background-image:url("../images/sticky.jpg");
 }
 
@@ -345,7 +345,7 @@ label{
 /* End of Parallex */
 /* End of Both Projects*/
 
-/* Comerica*/
+/* Financial*/
 /* Big Numbers: Modified from https://codepen.io/secondfret/pen/oexuc*/
 .bigNumbers{
   position: absolute;
@@ -403,7 +403,7 @@ label{
   height:400px; 
 }
 /* End of Flip Card */
-/* End of Comerica */
+/* End of Financial */
 
 /* Repayd*/
 iframe{
@@ -653,7 +653,7 @@ I also altered sizes for the different media queries*/
 
   /* Homepage/Most pages */
   /* Centers text chunks to the center of the page and makes sure it is only taking up 75% of the page, in an effort to make it easier for readers - Most Pages*/
-  .project_overview,.problem,#affinity,#recommendation, #comerica_findings, #about_me, #design_process, #prototype{
+  .project_overview,.problem,#affinity,#recommendation, #financial_findings, #about_me, #design_process, #prototype{
     margin-left: auto;
     margin-right: auto;
     width:75%;
